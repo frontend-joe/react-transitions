@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: #f6f2f9;
+  color: #222222;
+  font-family: "Euclid Circular A", "Poppins";
+}
+
+h1,
+h2 {
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+p {
+  position: relative;
+  z-index: 0;
+  opacity: 0.6;
+  line-height: 1.6;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 72px;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+}
+
+nav a {
+  color: inherit;
+  cursor: pointer;
+}
+
+nav a.active {
+  color: #8f44fd;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style-type: none;
+}
+
+main {
+  padding: 92px 40px 20px;
+}
+
+main article {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 80px 60px;
+}
+
+main article img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+
+.bars {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: grid;
+  pointer-events: none;
+}
+
+@keyframes show {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes hide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.bars > div {
+  background: #8f44fd;
+  transform: translateX(-100%);
+}
+
+.bars.show > div {
+  animation: show 0.2s both ease-in-out;
+}
+
+.bars.hide > div {
+  animation: hide 0.2s both ease-in-out;
+}
