@@ -1,4 +1,4 @@
-import { Example } from "./examples/transition-2/Example";
+import { Example } from "./examples/transition-3/Example";
 
 function App() {
   return <Example />;
